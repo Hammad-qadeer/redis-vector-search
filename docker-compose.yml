@@ -1,4 +1,4 @@
-version: '3.7'
+version: '2.1'
 services:
 
   redis-vector-db:
@@ -6,7 +6,6 @@ services:
     ports:
       - 6379:6379
       - 8001:8001
-
   backend:
     image: ghcr.io/spartee/redis-vss-fashion:v0.2.0
     environment:

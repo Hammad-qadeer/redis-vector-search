@@ -97,7 +97,7 @@ export const Home = (props: Props) => {
       <div className="album py-5 bg-light">
         <div className="container">
           <div>
-          { props.category != "" ? (
+          { props.category !== "" ? (
             <Chip
               style={{ margin: "5px 5px 25px 5px" }}
               label={`Category: ${props.category}`}
@@ -105,12 +105,12 @@ export const Home = (props: Props) => {
               clickable
               color='primary'
               onDelete={() => {props.setCategory(""); queryProducts()}}
-              disabled={props.category == ''}
+              disabled={props.category === ''}
               />
           ):(
             <></>
           )}
-          { props.gender != "" ? (
+          { props.gender !== "" ? (
             <Chip
               style={{ margin: "5px 5px 25px 5px" }}
               label={`Gender: ${props.gender}`}
@@ -118,7 +118,7 @@ export const Home = (props: Props) => {
               clickable
               color='primary'
               onDelete={() => {props.setGender(""); queryProducts()}}
-              disabled={props.gender == ''}
+              disabled={props.gender === ''}
               />
           ):(
             <></>
